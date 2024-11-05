@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 """
-This module defines a custom list class `MyList`
-that inherits from the built-in list class.
+This module provides a function to retrieve the
+list of available attributes and methods of an object.
 """
 
 
-class MyList(list):
+def lookup(obj):
     """
-    A custom list class that inherits from the built-in list class.
+    Returns the list of available attributes and
+    methods of an object.
     """
-
-    def print_sorted(self):
-        copied = self.copy()
-        copied.sort()
-        print(copied)
+    return dir(obj)
